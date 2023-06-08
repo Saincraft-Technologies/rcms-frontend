@@ -14,7 +14,7 @@ const Account = () => {
     <p className="card-text custom-text">Email:</p>
     <p className="card-text custom-text">Phone:</p>
 
-    <hr />
+    {/* <hr /> */}
 
     {/* account history */}
     {/* <h5 className="card-title custom-text">Account History</h5>
