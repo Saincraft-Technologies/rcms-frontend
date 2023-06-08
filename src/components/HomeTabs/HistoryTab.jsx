@@ -133,8 +133,8 @@ const Suppliers = () => {
                         Additional Info:  {supplier.supplier_city}
                       </p>
                       
-                      <button className="btn btn-primary ">Deposit</button>
-                      <button className="btn btn-secondary mx-4">Paid Receipt</button>
+                      {/* <button className="btn btn-primary ">Deposit</button> */}
+                      <button className="btn btn-secondary ">Paid Receipt</button>
                       
 
 
