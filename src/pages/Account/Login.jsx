@@ -40,8 +40,8 @@ function Login({ user, setUser, token, setToken }) {
       console.log('cintact:', contact);
       const hashVerify = await passwordHashVerify(
         inputs.password,
-        contact.authentications[0].salt,
-        contact.authentications[0].hash
+        contact[0].authentications[0].salt,
+        contact[0].authentications[0].hash
       );
 
       if (hashVerify) {
