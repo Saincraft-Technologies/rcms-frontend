@@ -39,6 +39,7 @@ const HomeTab = () => {
       let jsondata = new TextDecoder("utf-8").decode(value);
       jsondata = JSON.parse(jsondata);
       console.log(jsondata);
+      console.log('data: ', jsondata.data);
       
     });
 
