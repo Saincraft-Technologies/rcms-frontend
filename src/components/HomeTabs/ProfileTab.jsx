@@ -17,16 +17,16 @@ const Account = () => {
     <hr />
 
     {/* account history */}
-    <h5 className="card-title custom-text">Account History</h5>
+    {/* <h5 className="card-title custom-text">Account History</h5>
     <p className="card-text custom-text">View your account history</p>
     <button className="btn btn-primary custom-text">View History</button>
 
-    <hr />
+    <hr /> */}
 
     {/* delete account */}
-    <h5 className="card-title custom-text">Delete Account</h5>
+    {/* <h5 className="card-title custom-text">Delete Account</h5>
     <p className="card-text custom-text">Delete your account</p>
-    <button className="btn btn-danger custom-text">Delete Account</button>
+    <button className="btn btn-danger custom-text">Delete Account</button> */}
   </div>
 </div>
 
