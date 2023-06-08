@@ -3,7 +3,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom'
 
-
+import { UserContext } from '../App';
 
 const Navbar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
