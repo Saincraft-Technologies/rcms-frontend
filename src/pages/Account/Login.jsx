@@ -45,6 +45,9 @@ function Login({ user, setUser, token, setToken }) {
       );
 
       if (hashVerify) {
+        setUser(
+          contact[0].id, 
+        );
         navigate("/");
       } else {
         alert("Login not verified");
