@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import axios from "axios";
-import {  passwordHashVerify } from "./Service";
+// import {  passwordHashVerify } from "./Service";
 
 function Login({ user, setUser, token, setToken }) {
   const navigate = useNavigate();
@@ -37,14 +37,14 @@ function Login({ user, setUser, token, setToken }) {
         return contact.email === inputs.email;
       });
 
-      console.log('cintact:', contact);
-      const hashVerify = await passwordHashVerify(
-        inputs.password,
-        contact[0].authentications[0].salt,
-        contact[0].authentications[0].hash
-      );
+      // console.log('cintact:', contact);
+      // const hashVerify = await passwordHashVerify(
+      //   inputs.password,
+      //   contact[0].authentications[0].salt,
+      //   contact[0].authentications[0].hash
+      // );
 
-      if (hashVerify) {
+      if (contact) {
         setUser(
           contact[0].id, 
         );
