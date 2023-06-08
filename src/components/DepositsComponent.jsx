@@ -1,13 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import {Badge } from 'react-bootstrap';
 // import { fetchSuppliers } from '../../api';
+import DepositModal from './DepositModal';
 
 const Suppliers = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSavePayment = (amount) => {
+    // Logic to save the payment with the given amount
+    setShowModal(false);
+  };
+
+  
   const [expandedSupplierId, setExpandedSupplierId] = useState(null);
 
   const handleCardClick = (supplierId) => {
     setExpandedSupplierId((prevExpandedSupplierId) =>
-      prevExpandedSupplierId === supplierId ? null : supplierId
+      prevExpandedSupplierId === supplierId ? null : null
     );
   };
 
@@ -49,7 +66,14 @@ const Suppliers = () => {
         <div className="row">
           <div className="col-12 text-center mt-3">
             {/* new deposit button */}
-            <button className="btn btn-primary">New Deposit</button>
+            <div className='btn btn-primary' onClick={handleShowModal}>
+            Add Deposit
+          </div>
+          <DepositModal
+        show={showModal}
+        onClose={handleCloseModal}
+        onSave={handleSavePayment}
+      />
 
           </div>
         </div>
@@ -92,40 +116,46 @@ const Suppliers = () => {
                   className={`card mt-2 ${supplier.id === expandedSupplierId ? 'expanded' : ''}`}
                   onClick={() => handleCardClick(supplier.id)}
                 >
-                    {/* badge */}
-
-                    
-              <div className="badge-container position-absolute top-0 end-0 "
-              style={{
-                marginTop: "10px",
-                marginRight: "10px",
-              }}
-              >
-               
-                  <Badge  bg="success custom-badge" className="notification-badge" >
-                {/* tick icon */}
-                <i className="fas fa-check"></i>
-                  </Badge>
-              </div>
-                  <div className="card-body">
+                  {/* badge */}     
+                  <div className="badge-container position-absolute top-0 end-0 "
+                  style={{
+                    marginTop: "10px",
+                    marginRight: "10px",
+                  }}
+                  >
+                  
+                      <Badge  bg="success custom-badge" className="notification-badge" >
+                    {/* tick icon */}
+                    <i className="fas fa-check"></i>
+                      </Badge>
+                  </div>
+                  <div className="card-body mb-1">
                     <h5 className="card-title">{supplier.amount}</h5>
                     <h6 className="card-subtitle mb-2 text-muted">
                       {supplier.date || 'Supplier Email'}
                     </h6>
-                    <small className="card-text">Reciept:{" "}
+                    <small className="card-text ">Reciept:{" "}
                     {/* ITALIC */}
                     <span style={{fontStyle: "italic"}}>
                     {supplier.receipt}</span></small>
                     
-                    <p className="card-text mb-1">Account Name: {supplier.account_name}</p>
-                    <p className="card-text">Method: {supplier.method}</p>
+                    <p className="card-text mt-1 mb-1">Method: {supplier.method}</p>
+                    {/* <p className="card-text">Account Name: {supplier.account_name}</p> */}
                   </div>
-                    <div className="additionalcard">
-                      <p>Additional Info: {supplier.additional_info}</p>
-                      <button className="btn btn-primary">Action 1</button>
-                      <button className="btn btn-secondary">Action 2</button>
-                    </div>
-                  
+                  {/* IF EXPANDED */}
+                  {supplier.id === expandedSupplierId && (
+                  <div className="additionalcard p-4 ">
+                      <p>
+                        Additional Info:  {supplier.supplier_city}
+                      </p>
+                      
+                      {/* <button className="btn btn-primary mx-4">Accept Payment</button> */}
+                      <button className="btn btn-secondary">Paid Receipt</button>
+                      
+
+
+                  </div>
+)}
                 </div>
               ))}
           </div>

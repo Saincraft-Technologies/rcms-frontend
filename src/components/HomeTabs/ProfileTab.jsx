@@ -3,7 +3,7 @@ import React from 'react'
 const Account = () => {
   return (
     <>
-        <h1 className="text-center mt-3">Account</h1>
+        <h1 className="text-center mt-3 mb-3">Account</h1>
 
         <div className="container">
         <div className="card mt-3 mx-auto" style={{ maxWidth: "700px" }}>

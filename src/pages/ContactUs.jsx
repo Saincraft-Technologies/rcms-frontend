@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <h1 className='text-center mt-2'>Contact Us</h1>
+      <h1 className='text-center mt-3 mb-3'>Contact Support</h1>
 
       <div className="container">
       <div className="col">
@@ -33,12 +33,12 @@ const Contact = () => {
     <a href="https://www.gmail.com/" className="mx-1">
       <i className="fas fa-envelope-square fa-3x"></i>
     </a>
-    <a href="https://www.facebook.com/zahabsolar" className="mx-1">
+    {/* <a href="https://www.facebook.com/zahabsolar" className="mx-1">
       <i className="fab fa-facebook-square fa-3x"></i>
     </a>
     <a href="https://www.instagram.com/" className="mx-1">
       <i className="fab fa-instagram fa-3x"></i>
-    </a>
+    </a> */}
   </div>
 </div>
 
@@ -50,58 +50,48 @@ const Contact = () => {
         <div className="row justify-content-center">
           <div className="col-lg-5">
             {/* contact form */}
-            <div className="card mb-4">
+            <div className="card mb-4" id="contactform">
               <div className="card-body">
                 <h5
                   className="card-title
-                      text-center"
+                      text-center mb-3 mt-3"
                 >
                   Contact Form
                 </h5>
                 <form>
-                  <div
-                    className="form-group
-                        text-center"
-                  >
-                    <label for="exampleFormControlInput1">Name</label>
-                    <input
-                      type="name"
-                      className="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="
-                          Enter your name"
-                    />
-                  </div>
-                  <div
-                    className="form-group
-                        text-center"
-                  >
-                    <label for="exampleFormControlInput1">Phone Number</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="
-                          Enter your phone number"
-                    />
-                  </div>
-                  {/* select reason for contact */}
+                  {/* select Preffereed method of contact */}
                   <div
                     className="form-group
                         text-center"
                   >
                     <label for="exampleFormControlSelect1">
+                      Preffered Method of Correspondance
+                    </label>
+                    <select className="form-control" id="exampleFormControlSelect1">
+                      <option>SMS</option>
+                      <option>Phone Call</option>
+                      <option>Whatsapp</option>
+                      <option>Email</option>
+                    </select>
+                  </div>
+ 
+                  {/* select reason for contact */}
+                  <div
+                    className="form-group
+                        text-center mt-2"
+                  >
+                    <label for="exampleFormControlSelect1">
                       Reason for contact
                     </label>
                     <select className="form-control" id="exampleFormControlSelect1">
-                      <option>General</option>
-                      <option>Order</option>
-                      <option>Payment</option>
-                      <option>Delivery</option>
+                      <option>General Help</option>
+                      <option>Error Resolution</option>
+                      <option>Feature Request</option>
+                      <option>Discovered Bugs</option>
                       <option>Other</option>
                     </select>
                   </div>
-
+ 
                   {/* <div className="form-group
                         text-center">
                           <label for="exampleFormControlInput1">Email address</label>
@@ -110,7 +100,7 @@ const Contact = () => {
                         </div> */}
                   <div
                     className="form-group
-                        text-center"
+                        text-center mt-2"
                   >
                     <label for="exampleFormControlTextarea1">Message</label>
                     <textarea

@@ -27,16 +27,16 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-12 col-md text-center text-md-left mt-3">
-            <h4>Contact us</h4>
+            <h4>Contact Support</h4>
             <ul className="list-unstyled">
                 {/* social media icons */}
-                <li><a href="tel:1234567890" style={{ color: '#fff' }}><i className="fas fa-phone"></i> Call</a></li>
+                <li><a href="tel:1234567890" style={{ color: '#fff' }}><i className="fas fa-phone"></i> Call / SMS</a></li>
                 <li><a href="mailto:
                 husseincollege@gmail.com    " style={{ color: '#fff' }}><i className="fas fa-envelope"></i> Email</a></li>
                 <li><a href="https://wa.me/1234567890" style={{ color: '#fff' }}><i className="fab fa-whatsapp"></i> Whatsapp</a></li>
                 {/* wechat  */}
                 {/* cust support */}
-                <li><a href="/help" style={{ color: '#fff' }}><i className="fas fa-headset"></i> Customer Support</a></li>
+                <li><a href="/contactus#" style={{ color: '#fff' }}><i className="fas fa-headset"></i> Customer Support</a></li>
                 
 
             </ul>

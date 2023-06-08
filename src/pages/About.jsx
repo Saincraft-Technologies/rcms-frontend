@@ -63,15 +63,15 @@ const BusinessProfilePage = () => {
                 <Form.Label>TIN</Form.Label>
                 <Form.Control type="text" value={tin} onChange={(e) => setTIN(e.target.value)} />
               </Form.Group>
-              <Form.Group controlId="businessType">
+              <Form.Group controlId="businessType" className="mt-2">
                 <Form.Label>Business Type</Form.Label>
                 <Form.Control type="text" value={businessType} onChange={(e) => setBusinessType(e.target.value)} />
               </Form.Group>
-              <Form.Group controlId="providerType">
+              <Form.Group controlId="providerType" className="mt-2">
                 <Form.Label>Provider Type</Form.Label>
                 <Form.Control type="text" value={providerType} onChange={(e) => setProviderType(e.target.value)} />
               </Form.Group>
-              <Form.Group>
+              <Form.Group className="mt-2">
                 <Form.Label>Payment Method</Form.Label>
                 <Form.Check
                   type="radio"
@@ -90,7 +90,7 @@ const BusinessProfilePage = () => {
                   onChange={handlePaymentMethodChange}
                 />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button variant="primary mt-3" type="submit">
                 Submit
               </Button>
             </Form>

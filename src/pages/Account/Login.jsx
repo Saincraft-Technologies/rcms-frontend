@@ -61,10 +61,10 @@ function Login({ user, setUser, token, setToken }) {
     <Fragment>
       {!user && <Navbar />}
 
-      <div className="container">
         <div>
-          <h1 className="text-center mt-5">Login</h1>
+          <h1 className="text-center mt-4">Login</h1>
         </div>
+      <div className="container">
         <div className="row justify-content-center mt-5">
           <div className="card col-md-6 justify-content-center">
             <div className="card-body">
@@ -89,12 +89,12 @@ function Login({ user, setUser, token, setToken }) {
                     onChange={handleChange}
                   />
                   <div className="row mx-auto">
-                    <button className="btn btn-primary mt-4 mr-2" onClick={onLogin}>
+                    <button className="btn btn-primary mt-4 mr-2 mb-4" onClick={onLogin}>
                       Login
                     </button>
-                    <div className="mt-5">
-                      or <a href="/signup">SignUp</a>
-                    </div>
+                    {/* <div className="mt-4">
+                      or <a href="/#">SignUp</a>
+                    </div> */}
                   </div>
                 </div>
               </form>

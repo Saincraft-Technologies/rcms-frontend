@@ -67,9 +67,9 @@ const PaymentsLogPage = () => {
             Add Payment
           </Button>
         </div>
-        <div className="row">
+        <div className="row mt-4">
           {payments.map((payment) => (
-            <div key={payment.id} className="col-md-4">
+            <div key={payment.id} className="col-md-6">
               <PaymentTile payment={payment} />
             </div>
           ))}
