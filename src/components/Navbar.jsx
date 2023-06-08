@@ -15,7 +15,7 @@ const Navbar = () => {
       setIsCollapsed(!isCollapsed);
     };
 
-    const Logout = () => {
+    const logOut = () => {
       setUser(null);
     };
 
