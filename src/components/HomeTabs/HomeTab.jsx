@@ -35,8 +35,10 @@ const HomeTab = () => {
       },
     });
     // log readablestream body
-    console.log(res.body);
-    
+    console.log(res.body.getReader().read().then(({ value, done }) => {
+      console.log(new TextDecoder("utf-8").decode(value));
+    }));
+
     // const data = await res.json();
     // setBusinessList(data);
   };
