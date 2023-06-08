@@ -30,13 +30,14 @@ function Login({ user, setUser, token, setToken }) {
       let jsondata = new TextDecoder("utf-8").decode(value);
       jsondata = JSON.parse(jsondata);
       console.log(jsondata);
-      console.log('data: ', jsondata.data);
+      // console.log('data: ', jsondata.data);
       let contacts = jsondata.data;
 
       let contact = contacts.filter((contact) => {
         return contact.email === inputs.email;
       });
 
+      console.log('cintact:', contact);
       const hashVerify = await passwordHashVerify(
         inputs.password,
         contact.authentications[0].salt,
