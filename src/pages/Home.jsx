@@ -30,7 +30,7 @@ const BusinessListPage = () => {
     <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
       <input type="radio" className="btn-check" name="btnradio" id="btnradio1" onChange={() => setTabSet('Home')} autoComplete="off" defaultChecked />
       <label className="btn btn-outline-dark position-inherit" htmlFor="btnradio1">
-        Home
+        Businesses
         <span className="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
           2
         </span> {/* Example badge */}
@@ -38,7 +38,7 @@ const BusinessListPage = () => {
 
       <input type="radio" className="btn-check" name="btnradio" id="btnradio2" onChange={() => setTabSet('Tasks')} autoComplete="off" />
       <label className="btn btn-outline-dark position-inherit" htmlFor="btnradio2">
-        Tasks
+        Collections
         <span className="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">
           5
         </span> {/* Example badge */}
@@ -67,11 +67,11 @@ const BusinessListPage = () => {
   
         </div>
   {
-    TabSet === 'Businesses' &&
+    TabSet === 'Home' &&
     <HomeTab />
   }
   {
-    TabSet === 'Collections' &&
+    TabSet === 'Tasks' &&
     <TasksTab />
   }
   {
