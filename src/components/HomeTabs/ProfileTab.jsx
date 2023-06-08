@@ -14,14 +14,14 @@ const Account = () => {
     <p className="card-text custom-text">Email:</p>
     <p className="card-text custom-text">Phone:</p>
 
-    {/* <hr /> */}
+    <hr />
 
     {/* account history */}
-    {/* <h5 className="card-title custom-text">Account History</h5>
-    <p className="card-text custom-text">View your account history</p>
-    <button className="btn btn-primary custom-text">View History</button>
+    <h5 className="card-title custom-text">Change Password</h5>
+    <p className="card-text custom-text">Change your Password with OTP</p>
+    <button className="btn btn-primary custom-text">Change Password</button>
 
-    <hr /> */}
+    {/* <hr /> */}
 
     {/* delete account */}
     {/* <h5 className="card-title custom-text">Delete Account</h5>
