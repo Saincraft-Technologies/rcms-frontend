@@ -18,11 +18,11 @@ const Navbar = () => {
         <div className="container-fluid cssnav">
         <button className="toggle-btn" onClick={toggleSidebar}>
         {isCollapsed ? 
-        <i class="fas fa-sliders-h" 
+        <i className="fas fa-sliders-h" 
         style={{opacity: 0.5}}
         ></i>
         :
-        <i class="fas fa-sliders-h"></i>
+        <i className="fas fa-sliders-h"></i>
         // dim version of above icon
 
         }
@@ -31,7 +31,7 @@ const Navbar = () => {
           RCMS Admin</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-ellipsis-v"></i>
+        <i className="fas fa-ellipsis-v"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">

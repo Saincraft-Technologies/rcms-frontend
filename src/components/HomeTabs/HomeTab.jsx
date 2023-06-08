@@ -1,28 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Button, Card, Badge} from 'react-bootstrap'
 import {Link } from 'react-router-dom'
 
 const HomeTab = () => {
 
-    const businesses = [
-        {
-          id: 1,
-          name: 'Business A',
-          location: 'City A',
-          phone: '123-456-7890',
-          email: 'businessA@example.com',
-          notifications: 3,
-        },
-        {
-          id: 2,
-          name: 'Business B',
-          location: 'City B',
-          phone: '987-654-3210',
-          email: 'businessB@example.com',
-          notifications: 1,
-        },
-        // Add more businesses here...
-      ];
+    // const businesses = [
+    //     {
+    //       id: 1,
+    //       name: 'Business A',
+    //       location: 'City A',
+    //       phone: '123-456-7890',
+    //       email: 'businessA@example.com',
+    //       notifications: 3,
+    //     },
+    //     {
+    //       id: 2,
+    //       name: 'Business B',
+    //       location: 'City B',
+    //       phone: '987-654-3210',
+    //       email: 'businessB@example.com',
+    //       notifications: 1,
+    //     },
+    //     // Add more businesses here...
+    //   ];
+
+      // fetch business list using env viteapi path and viteapi key in headers
+  const [businesses, setBusinessList] = useState([]);
+  
+  const fetchBusinessList = async () => {
+    const res = await fetch(`${import.meta.env.VITE_API_PATH}/users/list`, {
+      headers: {
+        'authorization': import.meta.env.VITE_API_KEY,
+      },
+    });
+    console.log("data: ", res);
+    // const data = await res.json();
+    // setBusinessList(data);
+  };
+
+  useEffect(() => {
+    fetchBusinessList();
+  }, []);
       
       const BusinessTile = ({ business }) => {
         return (

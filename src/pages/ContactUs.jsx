@@ -8,11 +8,11 @@ const Contact = () => {
       <Navbar />
       <h1 className='text-center mt-2'>Contact Us</h1>
 
-      <div class="container">
-      <div class="col">
+      <div className="container">
+      <div className="col">
         {/* social media and contacts */}
-        <div class="card mb-4 mt-3">
-          <div class="card-body ">
+        <div className="card mb-4 mt-3">
+          <div className="card-body ">
            
             {/* icons */}
             <div className="table-responsive">
@@ -47,39 +47,39 @@ const Contact = () => {
         </div>
         {/* </div> */}
 
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
+        <div className="row justify-content-center">
+          <div className="col-lg-5">
             {/* contact form */}
-            <div class="card mb-4">
-              <div class="card-body">
+            <div className="card mb-4">
+              <div className="card-body">
                 <h5
-                  class="card-title
+                  className="card-title
                       text-center"
                 >
                   Contact Form
                 </h5>
                 <form>
                   <div
-                    class="form-group
+                    className="form-group
                         text-center"
                   >
                     <label for="exampleFormControlInput1">Name</label>
                     <input
                       type="name"
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlInput1"
                       placeholder="
                           Enter your name"
                     />
                   </div>
                   <div
-                    class="form-group
+                    className="form-group
                         text-center"
                   >
                     <label for="exampleFormControlInput1">Phone Number</label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlInput1"
                       placeholder="
                           Enter your phone number"
@@ -87,13 +87,13 @@ const Contact = () => {
                   </div>
                   {/* select reason for contact */}
                   <div
-                    class="form-group
+                    className="form-group
                         text-center"
                   >
                     <label for="exampleFormControlSelect1">
                       Reason for contact
                     </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <select className="form-control" id="exampleFormControlSelect1">
                       <option>General</option>
                       <option>Order</option>
                       <option>Payment</option>
@@ -102,25 +102,25 @@ const Contact = () => {
                     </select>
                   </div>
 
-                  {/* <div class="form-group
+                  {/* <div className="form-group
                         text-center">
                           <label for="exampleFormControlInput1">Email address</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="
+                          <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="
                           Enter your email address"/>
                         </div> */}
                   <div
-                    class="form-group
+                    className="form-group
                         text-center"
                   >
                     <label for="exampleFormControlTextarea1">Message</label>
                     <textarea
-                      class="form-control"
+                      className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="3"
                     ></textarea>
                   </div>
-                  <div class="d-flex justify-content-center mt-4">
-                    <button type="submit" class="btn btn-primary">
+                  <div className="d-flex justify-content-center mt-4">
+                    <button type="submit" className="btn btn-primary">
                       Submit
                     </button>
                   </div>
@@ -129,8 +129,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div class="col-lg-5 ">
-            <div class="container table-responsive">
+          <div className="col-lg-5 ">
+            <div className="container table-responsive">
               <iframe
                 title="maps"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.7276633678168!2d36.687918329222086!3d-3.372014561063617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd0868c5b679eaa8!2sZahab%20Solar!5e0!3m2!1sen!2stz!4v1667856628067!5m2!1sen!2stz"
