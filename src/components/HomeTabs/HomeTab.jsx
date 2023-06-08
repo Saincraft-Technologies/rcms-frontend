@@ -31,9 +31,12 @@ const HomeTab = () => {
     const res = await fetch(`${import.meta.env.VITE_API_PATH}/users/list`, {
       headers: {
         'authorization': import.meta.env.VITE_API_KEY,
+                
       },
     });
-    console.log("data: ", res);
+    // log readablestream body
+    console.log(res.body);
+    
     // const data = await res.json();
     // setBusinessList(data);
   };
