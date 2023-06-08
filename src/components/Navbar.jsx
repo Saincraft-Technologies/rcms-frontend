@@ -3,13 +3,13 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom'
 
-import { UserContext } from '../App';
+// import { UserContext } from '../App';
 
-const Navbar = () => {
+const Navbar = ({setUser}) => {
     const [isCollapsed, setIsCollapsed] = useState(true);
 
-    // get setUser from UserContext
-    const { setUser } = useContext(UserContext);
+    // get setUser function from UserContext
+    // const { setUser } = useContext(UserContext);
 
     const toggleSidebar = () => {
       setIsCollapsed(!isCollapsed);

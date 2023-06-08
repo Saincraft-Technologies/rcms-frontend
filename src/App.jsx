@@ -15,6 +15,8 @@ import ProtectedRoute from './components/ProtectedRoute'
 import Login from './pages/Account/Login'
 // import Signup from './pages/Account/Signup'
 
+import Navbar from './components/Navbar';
+
 export const UserContext = createContext();
 
 
@@ -25,7 +27,6 @@ function App() {
   return (
     <BrowserRouter>
             <UserContext.Provider value={user} 
-            setUser={setUser}
             >
 
       <Routes>
@@ -35,6 +36,10 @@ function App() {
         </ProtectedRoute>
         }/>
         
+        <Route path="/navbar" element={<Navbar 
+        setUser={setUser}
+        />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/payments" element={<Payments />} />
         <Route path="/register" element={<Register />} />
