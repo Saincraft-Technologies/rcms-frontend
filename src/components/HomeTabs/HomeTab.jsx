@@ -28,7 +28,7 @@ const HomeTab = () => {
   const [businesses, setBusinessList] = useState([]);
   
   const fetchBusinessList = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_PATH}/users/list`, {
+    const res = await fetch(`${import.meta.env.VITE_API_PATH}/contacts/list?rel=users`, {
       headers: {
         'authorization': import.meta.env.VITE_API_KEY,
                 
