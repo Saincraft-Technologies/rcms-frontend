@@ -36,7 +36,7 @@ const HomeTab = () => {
     });
     // log readablestream body
     console.log(res.body.getReader().read().then(({ value, done }) => {
-      console.log(JSON.parse(JSON.stringify(value)).data);
+      console.log(new TextDecoder("utf-8").decode(value.data.json()));
     }));
 
     // const data = await res.json();
