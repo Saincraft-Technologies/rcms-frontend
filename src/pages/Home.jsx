@@ -67,11 +67,11 @@ const BusinessListPage = () => {
   
         </div>
   {
-    TabSet === 'Home' &&
+    TabSet === 'Businesses' &&
     <HomeTab />
   }
   {
-    TabSet === 'Tasks' &&
+    TabSet === 'Collections' &&
     <TasksTab />
   }
   {

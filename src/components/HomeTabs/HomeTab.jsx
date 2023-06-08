@@ -4,48 +4,48 @@ import {Link } from 'react-router-dom'
 
 const HomeTab = () => {
 
-    // const businesses = [
-    //     {
-    //       id: 1,
-    //       name: 'Business A',
-    //       location: 'City A',
-    //       phone: '123-456-7890',
-    //       email: 'businessA@example.com',
-    //       notifications: 3,
-    //     },
-    //     {
-    //       id: 2,
-    //       name: 'Business B',
-    //       location: 'City B',
-    //       phone: '987-654-3210',
-    //       email: 'businessB@example.com',
-    //       notifications: 1,
-    //     },
-    //     // Add more businesses here...
-    //   ];
+    const businesses = [
+        {
+          id: 1,
+          name: 'Business A',
+          location: 'City A',
+          phone: '123-456-7890',
+          email: 'businessA@example.com',
+          notifications: 3,
+        },
+        {
+          id: 2,
+          name: 'Business B',
+          location: 'City B',
+          phone: '987-654-3210',
+          email: 'businessB@example.com',
+          notifications: 1,
+        },
+        // Add more businesses here...
+      ];
 
       // fetch business list using env viteapi path and viteapi key in headers
-  const [businesses, setBusinessList] = useState([]);
+  // const [businesses, setBusinessList] = useState([]);
   
-  const fetchBusinessList = async () => {
-    const res = await fetch(`${import.meta.env.VITE_API_PATH}/contacts/list?rel=users`, {
-      headers: {
-        'authorization': import.meta.env.VITE_API_KEY,
+  // const fetchBusinessList = async () => {
+  //   const res = await fetch(`${import.meta.env.VITE_API_PATH}/contacts/list?rel=users`, {
+  //     headers: {
+  //       'authorization': import.meta.env.VITE_API_KEY,
                 
-      },
-    });
-    // log readablestream body
-    await res.body.getReader().read().then(({ value, done }) => {
-      let jsondata = new TextDecoder("utf-8").decode(value);
-      jsondata = JSON.parse(jsondata);
-      console.log(jsondata);
-      console.log('data: ', jsondata.data);
+  //     },
+  //   });
+  //   // log readablestream body
+  //   await res.body.getReader().read().then(({ value, done }) => {
+  //     let jsondata = new TextDecoder("utf-8").decode(value);
+  //     jsondata = JSON.parse(jsondata);
+  //     console.log(jsondata);
+  //     console.log('data: ', jsondata.data);
       
-    });
+  //   });
 
-    // const data = await res.json();
-    // setBusinessList(data);
-  };
+  //   // const data = await res.json();
+  //   // setBusinessList(data);
+  // };
 
   useEffect(() => {
     fetchBusinessList();
