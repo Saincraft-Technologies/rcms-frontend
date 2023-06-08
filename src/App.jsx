@@ -24,7 +24,9 @@ function App() {
 
   return (
     <BrowserRouter>
-            <UserContext.Provider value={user}>
+            <UserContext.Provider value={user} 
+            setUser={setUser}
+            >
 
       <Routes>
         <Route path="/" element={

@@ -1,15 +1,24 @@
 // responsive bootstrap navbar
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom'
+
 
 
 const Navbar = () => {
     const [isCollapsed, setIsCollapsed] = useState(true);
 
+    // get setUser from UserContext
+    const { setUser } = useContext(UserContext);
+
     const toggleSidebar = () => {
       setIsCollapsed(!isCollapsed);
     };
+
+    const Logout = () => {
+      setUser(null);
+    };
+
     return (
         < >
         <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light"
@@ -47,7 +56,7 @@ const Navbar = () => {
       
         <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-        <Link className="nav-link" to="/products">
+        <Link className="nav-link" onClick={logOut}>
           {/* power button icon */}
         <i className="fas fa-power-off fa "></i>
   Log Out
