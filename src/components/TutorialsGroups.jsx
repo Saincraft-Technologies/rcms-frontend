@@ -17,8 +17,8 @@ const BusinessListPage = () => {
   return (
     <>
       <Navbar />
-      <CookieBanner />
-      <ChatPopUp />
+      {/* <CookieBanner /> */}
+      {/* <ChatPopUp /> */}
       {/* HEADER AND TOGGLES */}
       <div className="container ">
 <div className="row">

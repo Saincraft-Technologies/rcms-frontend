@@ -8,7 +8,7 @@ const Deposits = () => {
   return (
     <>
         <Navbar />
-        <PopupChat />
+        {/* <PopupChat /> */}
         <h1 className="text-center mt-3">Deposits</h1>
         <DepositsComponent />
         <Footer />

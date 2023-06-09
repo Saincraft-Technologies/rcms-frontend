@@ -10,7 +10,7 @@ const Tutorials = () => {
         <Navbar />
         <h1 className="text-center mt-3">Tutorials</h1>
         <TutorialsGroups />
-        <PopupChat />
+        {/* <PopupChat /> */}
         <Footer />
     </>
 
