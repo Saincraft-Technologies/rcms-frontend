@@ -44,7 +44,7 @@ function Login({ user, setUser, token, setToken }) {
       //   contact[0].authentications[0].hash
       // );
 
-      if (contact) {
+      if (contact.length>0) {
         setUser(
           contact[0].id, 
         );
