@@ -30,11 +30,11 @@ function App() {
             >
 
       <Routes>
-        <Route path="/" element={
-        <ProtectedRoute user={user}>
-          <Home />
-        </ProtectedRoute>
-        }/>
+      <Route path="/" element={import.meta.env.VITE_ENV === 'development' ? <Home /> : (
+    <ProtectedRoute user={user}>
+      <Home />
+    </ProtectedRoute>
+  )} />
         
         <Route path="/navbar" element={<Navbar 
         setUser={setUser}

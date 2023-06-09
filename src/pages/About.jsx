@@ -32,7 +32,7 @@ const BusinessProfilePage = () => {
   return (
     <>
       <Navbar />
-      <div className="container mt-4">
+      <div className="container mt-4 mb-5">
         <div className="d-flex justify-content-end mb-3">
           <Link to="/payments" className="text-decoration-none">
             <Button variant="primary">
